@@ -6,20 +6,20 @@
 
 // notes in the melody:
 int melody[] = {
-  NOTE_F5, NOTE_A5, NOTE_G5, NOTE_C6, NOTE_A5, NOTE_D6
+  NOTE_A5, NOTE_E5, 0, NOTE_F5, NOTE_C5, 0, NOTE_D5, NOTE_B4
 };
 
 // note durations: 4 = quarter note, 8 = eighth note, etc.:
 float noteDurations[] = {
-  2, 2, 2, 1, 1, 0.5
+  2, 4, 0, 2, 4, 0, 0.7, 0.5
 };
 
 
 void setup() {
-for (int thisNote = 0; thisNote < 6; thisNote++) {
+for (int thisNote = 0; thisNote < 8; thisNote++) {
 
     // to calculate the note duration, take one second divided by the note type.
-    int noteDuration = 70 / noteDurations[thisNote];
+    int noteDuration = 200 / noteDurations[thisNote];
     tone(melodyPin, melody[thisNote]);
     delay(noteDuration);
 
